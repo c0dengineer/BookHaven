@@ -1,0 +1,89 @@
+Jane Eyre|Charlotte Brontë|9780141441146|C|1847|An orphan becomes a governess and finds love and a dark secret at Thornfield Hall.
+Wuthering Heights|Emily Brontë|9780141439556|C|1847|A fierce, doomed love story set on the Yorkshire moors.
+Crime and Punishment|Fyodor Dostoevsky|9780140449136|C|1866|A student commits a murder and is consumed by guilt.
+Anna Karenina|Leo Tolstoy|9780143035008|C|1878|A married woman's affair unfolds against the society of imperial Russia.
+The Brothers Karamazov|Fyodor Dostoevsky|9780374528379|C|1880|Three brothers face faith, doubt and a family murder.
+Don Quixote|Miguel de Cervantes|9780060934347|C|1605|An old gentleman sets out as a knight and meets the real world.
+Moby-Dick|Herman Melville|9780142437247|C|1851|Captain Ahab's obsessive hunt for the white whale.
+The Count of Monte Cristo|Alexandre Dumas|9780140449266|C|1844|A wronged sailor escapes prison and plans an elaborate revenge.
+Les Misérables|Victor Hugo|9780451419439|C|1862|Redemption, justice and love in post-revolution France.
+Frankenstein|Mary Shelley|9780486282114|C|1818|A scientist's creation turns on its maker.
+Great Expectations|Charles Dickens|9780141439563|C|1861|Pip's rise from poor boy to gentleman and what it costs him.
+Sense and Sensibility|Jane Austen|9780141439662|C|1811|Two sisters, one sensible and one passionate, search for love.
+The Picture of Dorian Gray|Oscar Wilde|9780141439570|C|1890|A young man stays beautiful while his portrait ages.
+Little Women|Louisa May Alcott|9780147514011|C|1868|Four March sisters grow up in Civil War New England.
+The Old Man and the Sea|Ernest Hemingway|9780684801223|C|1952|An aging fisherman's epic struggle with a giant marlin.
+Of Mice and Men|John Steinbeck|9780140177398|C|1937|Two migrant workers chase a dream of land of their own.
+The Grapes of Wrath|John Steinbeck|9780143039433|C|1939|A family leaves the Dust Bowl for California.
+Rebecca|Daphne du Maurier|9780380730407|C|1938|A new bride is haunted by her husband's first wife.
+To Kill a Mockingbird|Harper Lee|9780061120084|F|1960|A lawyer defends an innocent man in a small Southern town.
+1984|George Orwell|9780451524935|F|1949|Life under total surveillance in Oceania.
+Animal Farm|George Orwell|9780451526342|F|1945|Farm animals revolt and a new tyranny rises.
+The Great Gatsby|F. Scott Fitzgerald|9780743273565|F|1925|Wealth, love and illusion in Jazz Age New York.
+The Catcher in the Rye|J.D. Salinger|9780316769488|F|1951|Holden Caulfield wanders New York after leaving school.
+Lord of the Flies|William Golding|9780399501487|F|1954|Schoolboys stranded on an island descend into savagery.
+Brave New World|Aldous Huxley|9780060850524|F|1932|A comfortable, engineered society that costs people their freedom.
+The Kite Runner|Khaled Hosseini|9781594631931|F|2003|Friendship, betrayal and redemption in Afghanistan.
+Life of Pi|Yann Martel|9780156027328|F|2001|A boy survives at sea with a Bengal tiger.
+Beloved|Toni Morrison|9781400033416|F|1987|A former slave is haunted by her past.
+One Hundred Years of Solitude|Gabriel García Márquez|9780060883287|F|1967|Seven generations of the Buendía family in Macondo.
+The God of Small Things|Arundhati Roy|9780812979657|F|1997|Twins in Kerala and a secret that changes a family.
+Midnight's Children|Salman Rushdie|9780812976533|F|1981|A boy born at India's independence shares its fate.
+The Book Thief|Markus Zusak|9780375842207|F|2005|A girl steals books in Nazi Germany, narrated by Death.
+Normal People|Sally Rooney|9781984822178|F|2018|Two Irish teenagers drift together and apart.
+The Remains of the Day|Kazuo Ishiguro|9780679731726|F|1989|A butler reflects on duty and missed chances.
+Never Let Me Go|Kazuo Ishiguro|9781400078776|F|2005|Students at a boarding school discover their purpose.
+The Namesake|Jhumpa Lahiri|9780618485222|F|2003|A Bengali family in America and a son's name.
+Things Fall Apart|Chinua Achebe|9780385474542|F|1958|A proud Igbo leader faces colonial change.
+The Seven Husbands of Evelyn Hugo|Taylor Jenkins Reid|9781501161933|F|2017|A Hollywood icon finally tells her story.
+The White Tiger|Aravind Adiga|9781416562603|F|2008|A driver's rise from poverty in modern India.
+Slaughterhouse-Five|Kurt Vonnegut|9780385333849|F|1969|Billy Pilgrim comes unstuck in time.
+Fahrenheit 451|Ray Bradbury|9781451673319|S|1953|Firemen burn books in a future that fears ideas.
+The Hitchhiker's Guide to the Galaxy|Douglas Adams|9780345391803|S|1979|Arthur Dent is swept off Earth just before it is demolished.
+Ender's Game|Orson Scott Card|9780812550702|S|1985|A boy genius is trained to fight an alien war.
+The Martian|Andy Weir|9780553418026|S|2011|An astronaut stranded on Mars must science his way home.
+Project Hail Mary|Andy Weir|9780593135204|S|2021|A lone astronaut wakes with no memory and a mission to save Earth.
+Neuromancer|William Gibson|9780441569595|S|1984|A hacker takes one last job in cyberspace.
+Foundation|Isaac Asimov|9780553293357|S|1951|A mathematician plans to shorten a galactic dark age.
+The Left Hand of Darkness|Ursula K. Le Guin|9780441478125|S|1969|An envoy visits a world without fixed gender.
+The Handmaid's Tale|Margaret Atwood|9780385490818|S|1985|Women lose their rights in the republic of Gilead.
+Do Androids Dream of Electric Sheep?|Philip K. Dick|9780345404473|S|1968|A bounty hunter hunts rogue androids.
+The Three-Body Problem|Liu Cixin|9780765382030|S|2008|First contact begins during China's Cultural Revolution.
+The Fellowship of the Ring|J.R.R. Tolkien|9780547928210|Y|1954|The quest to destroy the One Ring begins.
+A Game of Thrones|George R.R. Martin|9780553593716|Y|1996|Noble families fight for the Iron Throne.
+The Name of the Wind|Patrick Rothfuss|9780756404741|Y|2007|A legendary wizard tells his own story.
+Harry Potter and the Sorcerer's Stone|J.K. Rowling|9780590353427|Y|1997|A boy learns he is a wizard.
+The Lion, the Witch and the Wardrobe|C.S. Lewis|9780064471046|Y|1950|Four children find Narnia through a wardrobe.
+A Wizard of Earthsea|Ursula K. Le Guin|9780547773742|Y|1968|A young wizard faces the shadow he unleashed.
+Murder on the Orient Express|Agatha Christie|9780062693662|M|1934|Poirot investigates a murder aboard a snowbound train.
+The Hound of the Baskervilles|Arthur Conan Doyle|9780486282145|M|1902|Sherlock Holmes confronts a legendary spectral hound.
+Gone Girl|Gillian Flynn|9780307588371|M|2012|A wife vanishes and her husband becomes the prime suspect.
+The Girl with the Dragon Tattoo|Stieg Larsson|9780307454546|M|2005|A journalist and a hacker uncover a decades-old disappearance.
+The Da Vinci Code|Dan Brown|9780307474278|M|2003|A symbologist chases clues hidden in famous art.
+The Girl on the Train|Paula Hawkins|9781594634024|M|2015|A commuter becomes entangled in a missing-person case.
+Sapiens|Yuval Noah Harari|9780062316110|N|2011|A sweeping history of how humans came to rule the Earth.
+Homo Deus|Yuval Noah Harari|9780062464316|N|2015|What might become of humans in a world run by data.
+Thinking, Fast and Slow|Daniel Kahneman|9780374533557|N|2011|How two systems of thought shape our decisions.
+A Brief History of Time|Stephen Hawking|9780553380163|N|1988|From the Big Bang to black holes, explained for everyone.
+Cosmos|Carl Sagan|9780345539434|N|1980|A journey through the universe and our place in it.
+Guns, Germs, and Steel|Jared Diamond|9780393317558|N|1997|Why some societies came to dominate others.
+The Selfish Gene|Richard Dawkins|9780198788607|N|1976|Evolution seen from the point of view of genes.
+Outliers|Malcolm Gladwell|9780316017930|N|2008|What really separates the extraordinarily successful.
+Astrophysics for People in a Hurry|Neil deGrasse Tyson|9780393609394|N|2017|The universe's big ideas in a quick, friendly read.
+21 Lessons for the 21st Century|Yuval Noah Harari|9780525512196|N|2018|Clear thinking about the problems of today.
+Educated|Tara Westover|9780399590504|B|2018|A girl raised off the grid finds her way to university.
+Becoming|Michelle Obama|9781524763138|B|2018|The former First Lady's story, in her own voice.
+Steve Jobs|Walter Isaacson|9781451648539|B|2011|The authorised biography of Apple's co-founder.
+Born a Crime|Trevor Noah|9780399588174|B|2016|Growing up in South Africa during and after apartheid.
+Wings of Fire|A.P.J. Abdul Kalam|9788173711466|B|1999|The life of India's Missile Man and 11th President.
+The Diary of a Young Girl|Anne Frank|9780553296983|B|1947|A teenager's diary written while hiding in Amsterdam.
+Man's Search for Meaning|Viktor Frankl|9780807014295|P|1946|Finding purpose after surviving the concentration camps.
+The Psychology of Money|Morgan Housel|9780857197689|P|2020|Timeless lessons on wealth, greed and happiness.
+Rich Dad Poor Dad|Robert Kiyosaki|9781612680194|P|1997|What the rich teach their kids about money.
+How to Win Friends and Influence People|Dale Carnegie|9780671027032|P|1936|Classic advice on getting along with people.
+Mindset|Carol S. Dweck|9780345472328|P|2006|How believing you can improve changes what you achieve.
+The Power of Now|Eckhart Tolle|9781577314806|P|1997|A guide to living fully in the present moment.
+The Pragmatic Programmer|Andrew Hunt and David Thomas|9780135957059|T|1999|Practical habits for becoming a better software developer.
+Introduction to Algorithms|Thomas H. Cormen et al.|9780262046305|T|1990|The standard reference on algorithms and data structures.
+The Mythical Man-Month|Frederick P. Brooks Jr.|9780201835953|T|1975|Essays on why software projects run late.
+Design Patterns|Erich Gamma et al.|9780201633610|T|1994|Reusable solutions to common software design problems.

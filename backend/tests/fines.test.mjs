@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { calculateFine, getDueDate } from '../src/lib/fines.js';
+const d = (s) => new Date(`${s}T12:00:00`);
+test('return on due date has no fine', () => assert.equal(calculateFine(d('2026-10-15'), d('2026-10-15')), 0));
+test('one calendar day late costs ₹5', () => assert.equal(calculateFine(d('2026-10-15'), d('2026-10-16')), 5));
+test('three calendar days late costs ₹15', () => assert.equal(calculateFine(d('2026-10-15'), d('2026-10-18')), 15));
+test('early return has no fine', () => assert.equal(calculateFine(d('2026-10-15'), d('2026-10-10')), 0));
+test('custom fine rate is applied', () => assert.equal(calculateFine(d('2026-10-15'), d('2026-10-17'), 7.5), 15));
+test('invalid due date rejected', () => assert.throws(() => calculateFine(new Date('invalid'), d('2026-10-16')), /Invalid due date/));
+test('invalid return date rejected', () => assert.throws(() => calculateFine(d('2026-10-15'), new Date('invalid')), /Invalid return date/));
+test('negative rate rejected', () => assert.throws(() => calculateFine(d('2026-10-15'), d('2026-10-16'), -1), /non-negative/));
+test('default loan period is 14 days', () => assert.equal((getDueDate(d('2026-10-01')).getDate()), 15));
+test('invalid loan duration rejected', () => assert.throws(() => getDueDate(d('2026-10-01'), 0), /between 1 and 365/));

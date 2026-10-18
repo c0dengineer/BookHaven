@@ -1,0 +1,155 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  CUSTOMER
+  STAFF
+  LIBRARIAN
+  ADMIN
+  AUDITOR
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+  CANCELLED
+}
+
+enum LoanStatus {
+  ACTIVE
+  RETURNED
+}
+
+enum AuditAction {
+  CREATE
+  UPDATE
+  DELETE
+  LOGIN
+  CHECKOUT
+  LOAN_ISSUE
+  LOAN_RETURN
+  ACCESS_DENIED
+}
+model User {
+  id String @id @default(cuid())
+  email String @unique
+  name String
+  passwordHash String?
+  cognitoSub String? @unique
+  role Role @default(CUSTOMER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  wishlist WishlistItem[]
+  cartItems CartItem[]
+  orders Order[]
+  loans Loan[]
+  auditLogs AuditLog[] @relation("ActorLogs")
+  @@index([role])
+}
+model Category {
+  id String @id @default(cuid())
+  name String @unique
+  slug String @unique
+  description String?
+  books Book[]
+}
+model Book {
+  id String @id @default(cuid())
+  title String
+  author String
+  isbn String @unique
+  description String @db.Text
+  coverUrl String?
+  price Decimal @db.Decimal(10,2)
+  rating Decimal @default(4.5) @db.Decimal(2,1)
+  stock Int @default(0)
+  publishedYear Int?
+  categoryId String
+  category Category @relation(fields: [categoryId], references: [id])
+  wishlistItems WishlistItem[]
+  cartItems CartItem[]
+  orderItems OrderItem[]
+  loans Loan[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([title, author])
+  @@index([categoryId])
+}
+model WishlistItem {
+  id String @id @default(cuid())
+  userId String
+  bookId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  book Book @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  @@unique([userId, bookId])
+}
+model CartItem {
+  id String @id @default(cuid())
+  userId String
+  bookId String
+  quantity Int @default(1)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  book Book @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  @@unique([userId, bookId])
+}
+model Order {
+  id String @id @default(cuid())
+  userId String
+  status OrderStatus @default(PENDING)
+  total Decimal @db.Decimal(10,2)
+  simulatedPaymentRef String?
+  user User @relation(fields: [userId], references: [id])
+  items OrderItem[]
+  createdAt DateTime @default(now())
+  @@index([userId, createdAt])
+}
+model OrderItem {
+  id String @id @default(cuid())
+  orderId String
+  bookId String
+  titleSnapshot String
+  unitPrice Decimal @db.Decimal(10,2)
+  quantity Int
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  book Book @relation(fields: [bookId], references: [id])
+}
+model Loan {
+  id String @id @default(cuid())
+  userId String
+  bookId String
+  issuedAt DateTime @default(now())
+  dueAt DateTime
+  returnedAt DateTime?
+  status LoanStatus @default(ACTIVE)
+  fineAmount Decimal @default(0) @db.Decimal(10,2)
+  issuedById String
+  user User @relation(fields: [userId], references: [id])
+  book Book @relation(fields: [bookId], references: [id])
+  @@index([status, dueAt])
+  @@index([userId, issuedAt])
+}
+model NewsletterSubscription {
+  id String @id @default(cuid())
+  email String @unique
+  createdAt DateTime @default(now())
+}
+model AuditLog {
+  id String @id @default(cuid())
+  actorId String?
+  action AuditAction
+  resource String
+  resourceId String?
+  details Json?
+  ipAddress String?
+  createdAt DateTime @default(now())
+  actor User? @relation("ActorLogs", fields: [actorId], references: [id], onDelete: SetNull)
+  @@index([createdAt])
+  @@index([action])
+}

@@ -1,0 +1,294 @@
+/* ShopAgent UI system, coffee palette.
+   Scoped to inner pages (.page-wrap, .auth-page), the toast and the floating cart.
+   The landing page (Home) is intentionally untouched. */
+:root{--bg:#f7f1e8;--cd:#fffcf7;--bd:#e8dccb;--tx:#30251f;--mu:#7a695c;--pr:#8a5a3b;--ps:#f1e5d4;--on:#fffaf3;--gr:#3f8a5f;--gs:#e4f0e5;--rd:#c0473f;--rs:#f9e5df;--am:#b97a22;--as:#faefd8;--sh:0 1px 2px #3e2b2312,0 6px 18px #3e2b230b}
+[data-theme=dark]{--bg:#211914;--cd:#2a211b;--bd:#43332a;--tx:#f4e9dc;--mu:#bba797;--pr:#d0a579;--ps:#3b2c20;--on:#1c140e;--gr:#7fc79a;--gs:#1d2f23;--rd:#ee8a82;--rs:#3b2321;--am:#e8b05f;--as:#352a17;--sh:0 1px 3px #0006}
+
+/* Base */
+.app-shell :is(.page-wrap,.auth-page){font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) :is(button,input,select,textarea){font-family:inherit}
+.app-shell :is(.page-wrap,.auth-page) :is(a,button):focus-visible{outline:2px solid var(--pr);outline-offset:2px}
+.app-shell .page-wrap{max-width:1150px;padding:30px 34px 72px}
+
+/* Typography */
+.app-shell :is(.page-wrap,.auth-page) :is(h1,h2,h3,.book-title,.detail-description,.stat-card strong,.empty-state h3){font-family:inherit;font-style:normal}
+.app-shell :is(.page-wrap,.auth-page) h1{font-size:25px;line-height:1.25;font-weight:600;letter-spacing:-.01em;margin:8px 0 6px}
+.app-shell :is(.page-wrap,.auth-page) h1 em{font-style:normal;color:var(--pr);font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) :is(h2,h3){font-size:20px;font-weight:600;letter-spacing:0;line-height:1.3}
+.app-shell :is(.page-wrap,.auth-page) .eyebrow{display:block;font-size:15px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mu);line-height:1.4}
+.app-shell :is(.page-wrap,.auth-page) .page-intro{text-align:left;padding:4px 0 20px}
+.app-shell :is(.page-wrap,.auth-page) :is(.page-intro p,.section-heading p,.account-heading p,.dashboard-top p){font-size:16px;color:var(--mu);margin:0}
+.app-shell :is(.page-wrap,.auth-page) .section-heading{margin-bottom:16px}
+.app-shell :is(.page-wrap,.auth-page) .loading-line{color:var(--mu)}
+
+/* Buttons (.btn / .btn.p) */
+.app-shell :is(.page-wrap,.auth-page) .button{min-height:0;padding:10px 16px;gap:8px;font-size:16px;font-weight:500;border-radius:12px;background:var(--cd);color:var(--tx);border:1px solid var(--bd);transition:border-color .15s,background .15s}
+.app-shell :is(.page-wrap,.auth-page) .button:hover{transform:none;border-color:var(--pr);background:var(--cd)}
+.app-shell :is(.page-wrap,.auth-page) .button-outline:hover{background:var(--ps)}
+.app-shell :is(.page-wrap,.auth-page) .button-dark{background:var(--pr);color:var(--on);border-color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) .button-dark:hover{background:var(--pr);filter:brightness(.94)}
+.app-shell :is(.page-wrap,.auth-page) .button:disabled{opacity:.5;transform:none;filter:none}
+.app-shell :is(.page-wrap,.auth-page) .text-link{color:var(--pr);font-size:16px;font-weight:500;border-bottom:0;padding:0;margin:0}
+.app-shell :is(.page-wrap,.auth-page) .back-link{font-size:16px;color:var(--mu);margin:0 0 18px}
+.app-shell :is(.page-wrap,.auth-page) .back-link:hover{color:var(--pr)}
+
+/* Cards */
+.app-shell :is(.page-wrap,.auth-page) :is(.book-card,.account-content,.dashboard-panel,.stat-card,.order-summary,.lending-cards>div,.borrow-cta,.issue-form,.empty-state,.catalog-toolbar,.detail-copy,.cart-row){background:var(--cd);border:1px solid var(--bd);border-radius:18px;box-shadow:var(--sh);padding:18px;color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-panel{margin-top:16px}
+.app-shell :is(.page-wrap,.auth-page) .account-content{padding:22px}
+.app-shell :is(.page-wrap,.auth-page) .detail-copy{padding:22px}
+.app-shell :is(.page-wrap,.auth-page) .borrow-cta{padding:18px 22px}
+.app-shell :is(.page-wrap,.auth-page) .catalog-toolbar{padding:12px;gap:10px;margin-bottom:16px}
+.app-shell :is(.page-wrap,.auth-page) .cart-row{padding:14px}
+.app-shell :is(.page-wrap,.auth-page) .skeleton-card{height:330px;border-radius:18px;background:linear-gradient(90deg,var(--ps) 25%,var(--bg) 50%,var(--ps) 75%);background-size:200% 100%}
+
+/* Product (book) card */
+.app-shell :is(.page-wrap,.auth-page) .book-grid{grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:16px}
+.app-shell :is(.page-wrap,.auth-page) .mini-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.app-shell :is(.page-wrap,.auth-page) .card-cover-wrap{background:var(--ps);border-radius:12px;min-height:220px;padding:14px}
+.app-shell :is(.page-wrap,.auth-page) .card-cover-wrap .book-cover{height:190px;width:130px}
+.app-shell :is(.page-wrap,.auth-page) .book-cover{border-radius:6px}
+.app-shell :is(.page-wrap,.auth-page) .book-meta{padding:14px 0 0}
+.app-shell :is(.page-wrap,.auth-page) .book-title{font-size:17px;font-weight:600;line-height:1.35;letter-spacing:0;margin:6px 0 2px;color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) .book-title:hover{color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) .book-author{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .book-card-bottom{margin:12px 0}
+.app-shell :is(.page-wrap,.auth-page) .book-card-bottom>strong{font-size:17px;font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) .rating{font-size:15px;color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) .add-button{border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:12px;padding:10px 14px;font-size:16px;font-weight:500}
+.app-shell :is(.page-wrap,.auth-page) .add-button:hover{background:var(--cd);color:var(--tx);border-color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) .save-button{background:var(--cd);color:var(--mu);border:1px solid var(--bd);width:34px;height:34px}
+.app-shell :is(.page-wrap,.auth-page) .save-button:hover{background:var(--cd);color:var(--pr);border-color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) .sold-out{background:var(--as);color:var(--am);border-radius:99px;font-size:15px;font-weight:500;padding:3px 10px}
+
+/* Toolbar and inputs */
+.app-shell :is(.page-wrap,.auth-page) :is(.catalog-search,.select-wrap){background:var(--bg);border:1px solid var(--bd);border-radius:14px;color:var(--mu);height:44px}
+.app-shell :is(.page-wrap,.auth-page) :is(.catalog-search,.select-wrap):focus-within{border-color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) :is(.catalog-search input,.select-wrap select){color:var(--tx);font-size:16px}
+.app-shell :is(.page-wrap,.auth-page) .catalog-search button{background:var(--pr);color:var(--on);border-radius:10px;padding:6px 12px;font-size:16px;font-weight:500}
+.app-shell :is(.page-wrap,.auth-page) .select-wrap span{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .results-line{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) :is(.auth-form,.profile-form) label{font-size:15px;font-weight:600;color:var(--mu);letter-spacing:.02em}
+.app-shell :is(.page-wrap,.auth-page) :is(.auth-form,.profile-form,.issue-form,.inventory-form) :is(input,select,textarea),.app-shell :is(.page-wrap,.auth-page) :is(.stock-input,td select){height:auto;min-height:42px;background:var(--bg);border:1px solid var(--bd);border-radius:14px;padding:10px 14px;font-size:16px;color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) :is(.stock-input,td select){min-height:0;padding:6px 10px;border-radius:10px;font-size:16px}
+.app-shell :is(.page-wrap,.auth-page) .stock-input{width:72px}
+.app-shell :is(.page-wrap,.auth-page) :is(input,select,textarea):focus{border-color:var(--pr);outline:none}
+.app-shell :is(.page-wrap,.auth-page) .profile-form input:disabled{background:var(--ps);color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) :is(.form-error,.inventory-error){background:var(--rs);color:var(--rd);border:0;border-left:4px solid var(--rd);border-radius:14px;padding:10px 14px;font-size:16px;font-weight:500}
+.app-shell :is(.page-wrap,.auth-page) :is(.form-error,.inventory-error)::before{content:'\2717  ';font-weight:600}
+
+/* Empty states, chips, pagination */
+.app-shell :is(.page-wrap,.auth-page) .empty-state{min-height:200px;padding:32px 18px;color:var(--mu);gap:10px}
+.app-shell :is(.page-wrap,.auth-page) .empty-state h3{font-size:20px;color:var(--tx);margin:4px 0 0}
+.app-shell :is(.page-wrap,.auth-page) .empty-state p{font-size:16px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .small-empty{min-height:120px;box-shadow:none;background:var(--bg);font-size:16px}
+.app-shell :is(.page-wrap,.auth-page) :is(.status-pill,.role-chip){display:inline-flex;align-items:center;gap:6px;background:var(--ps);color:var(--pr);border-radius:99px;padding:3px 10px;font-size:15px;font-weight:500;letter-spacing:0}
+.app-shell :is(.page-wrap,.auth-page) .role-chip{padding:6px 12px}
+.app-shell :is(.page-wrap,.auth-page) .pagination span{font-size:15px;color:var(--mu)}
+
+/* Detail page */
+.app-shell :is(.page-wrap,.auth-page) .detail-layout{max-width:none;margin:0 0 32px;gap:16px;align-items:start}
+.app-shell :is(.page-wrap,.auth-page) .detail-cover{background:var(--ps);border:1px solid var(--bd);border-radius:18px;min-height:380px}
+.app-shell :is(.page-wrap,.auth-page) .cover-caption{font-size:15px;letter-spacing:.05em;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .detail-description{font-size:16px;line-height:1.65;color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) .detail-price{font-size:28px;font-weight:600;margin:18px 0 6px}
+.app-shell :is(.page-wrap,.auth-page) .detail-price span{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .detail-rating{border-bottom:1px solid var(--bd);font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .detail-rating span:first-child{color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) :is(.availability,.detail-promise){font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .stock-dot{background:var(--gr)}
+.app-shell :is(.page-wrap,.auth-page) .stock-dot.out{background:var(--rd)}
+
+/* Cart */
+.app-shell :is(.page-wrap,.auth-page) .cart-layout{gap:16px}
+.app-shell :is(.page-wrap,.auth-page) .cart-items{border-top:0;display:grid;gap:10px}
+.app-shell :is(.page-wrap,.auth-page) :is(.cart-row-copy>strong,.line-total){font-size:16px;font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) .quantity-control{border:1px solid var(--bd);border-radius:12px;background:var(--bg);overflow:hidden}
+.app-shell :is(.page-wrap,.auth-page) .quantity-control button{color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .quantity-control .remove-item{border-left:1px solid var(--bd)}
+.app-shell :is(.page-wrap,.auth-page) .order-summary h3{font-size:20px;margin:6px 0 14px}
+.app-shell :is(.page-wrap,.auth-page) .order-summary>div{font-size:16px;color:var(--mu);margin:12px 0}
+.app-shell :is(.page-wrap,.auth-page) .order-summary>div strong{color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) .order-summary .summary-total{border-top:1px solid var(--bd);color:var(--tx);font-size:16px}
+.app-shell :is(.page-wrap,.auth-page) .order-summary .summary-total strong{font-size:23px;font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) .safe-note{font-size:15px;color:var(--mu)}
+
+/* Account and loans */
+.app-shell :is(.page-wrap,.auth-page) .account-heading{margin:0 0 22px}
+.app-shell :is(.page-wrap,.auth-page) .avatar-large{width:52px;height:52px;font-size:21px;background:var(--ps);color:var(--pr);border:1px solid var(--bd)}
+.app-shell :is(.page-wrap,.auth-page) .account-layout{gap:16px}
+.app-shell :is(.page-wrap,.auth-page) .account-nav button{border-radius:12px;padding:10px 12px;font-size:16px;color:var(--mu);font-weight:500}
+.app-shell :is(.page-wrap,.auth-page) .account-nav button:hover{background:var(--ps);color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) .account-nav button.active{background:var(--ps);color:var(--pr);font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) .account-nav button:last-child{margin-top:10px;border-top:0;padding-top:10px}
+.app-shell :is(.page-wrap,.auth-page) .account-content h2{font-size:20px;margin:4px 0}
+.app-shell :is(.page-wrap,.auth-page) .account-content>p{font-size:16px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .history-row{border-bottom:1px solid var(--bd);font-size:16px}
+.app-shell :is(.page-wrap,.auth-page) .history-row small{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .lending-cards{gap:16px}
+.app-shell :is(.page-wrap,.auth-page) .lending-cards>div{min-height:0}
+.app-shell :is(.page-wrap,.auth-page) .lending-cards h3{font-size:17px;margin:6px 0}
+.app-shell :is(.page-wrap,.auth-page) .lending-cards p{font-size:16px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .lending-icon{background:var(--ps);color:var(--pr);border-radius:12px}
+.app-shell :is(.page-wrap,.auth-page) .borrow-cta h2{font-size:20px;margin:0 0 4px}
+.app-shell :is(.page-wrap,.auth-page) .borrow-cta p,.app-shell :is(.page-wrap,.auth-page) .issue-form p{font-size:16px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .issue-form h3{font-size:17px}
+.app-shell :is(.page-wrap,.auth-page) .loan-management{border-top:0;padding-top:8px}
+
+/* Tables */
+.app-shell :is(.page-wrap,.auth-page) .table-wrap{margin-top:12px;border:1px solid var(--bd);border-radius:14px}
+.app-shell :is(.page-wrap,.auth-page) table{font-size:16px}
+.app-shell :is(.page-wrap,.auth-page) th{background:var(--bg);color:var(--mu);font-size:15px;font-weight:600;letter-spacing:.05em;padding:10px 12px}
+.app-shell :is(.page-wrap,.auth-page) td{border-bottom:1px solid var(--bd);color:var(--tx);padding:12px}
+.app-shell :is(.page-wrap,.auth-page) tr:last-child td{border-bottom:0}
+.app-shell :is(.page-wrap,.auth-page) td strong{font-size:16px;font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) td small{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .small-action{border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:10px;padding:6px 12px;font-size:16px;font-weight:500}
+.app-shell :is(.page-wrap,.auth-page) .small-action:hover{background:var(--cd);border-color:var(--pr);color:var(--tx)}
+
+/* Dashboard */
+.app-shell :is(.page-wrap,.auth-page) .dashboard-top h1{margin:6px 0}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-tabs{border-bottom:1px solid var(--bd);margin:18px 0 16px;gap:18px}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-tabs button{font-size:16px;color:var(--mu);font-weight:500}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-tabs button.active{color:var(--tx);border-color:var(--pr);font-weight:600}
+.app-shell :is(.page-wrap,.auth-page) .stat-grid,.app-shell :is(.page-wrap,.auth-page) .dashboard-lower{gap:16px}
+.app-shell :is(.page-wrap,.auth-page) .stat-icon{border-radius:12px;background:var(--ps);color:var(--pr);margin-bottom:12px}
+.app-shell :is(.page-wrap,.auth-page) .stat-card small{font-size:15px;color:var(--mu)}
+.app-shell :is(.page-wrap,.auth-page) .stat-card strong{font-size:34px;font-weight:600;line-height:1.1;margin-top:4px}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-panel h3{font-size:20px;margin:6px 0 12px}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-panel>:is(a,button):not(.button){border-bottom:1px solid var(--bd);font-size:16px;color:var(--tx)}
+.app-shell :is(.page-wrap,.auth-page) .dashboard-panel>:is(a,button):not(.button):hover{color:var(--pr)}
+.app-shell :is(.page-wrap,.auth-page) :is(.dashboard-panel>p,.dashboard-panel .muted){font-size:16px;color:var(--mu)}
+
+/* Auth: soft panels instead of the heavy brown block */
+.app-shell .auth-page{max-width:1000px;margin:30px auto 60px;padding:0 20px;gap:16px;min-height:0}
+.app-shell .auth-page .auth-art{background:var(--ps);color:var(--tx);border:1px solid var(--bd);border-radius:18px;padding:40px}
+.app-shell .auth-page .auth-art:after{display:none}
+.app-shell .auth-page .auth-art-inner>svg{color:var(--pr);margin-bottom:28px}
+.app-shell .auth-page .auth-art .eyebrow{color:var(--mu)}
+.app-shell .auth-page .auth-art h2{font-size:25px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:10px 0}
+.app-shell .auth-page .auth-art h2 em{color:var(--pr);font-style:normal}
+.app-shell .auth-page .auth-art p{font-size:16px;color:var(--mu)}
+.app-shell .auth-page .auth-form-side{background:var(--cd);border:1px solid var(--bd);border-radius:18px;box-shadow:var(--sh);padding:36px}
+.app-shell .auth-page .auth-form>p,.app-shell .auth-page .auth-switch{font-size:16px;color:var(--mu)}
+.app-shell .auth-page .auth-switch a{color:var(--pr)}
+.app-shell .auth-page .auth-demo{font-size:15px!important;color:var(--mu)!important}
+
+/* Shared overlays */
+.app-shell .toast-host .toast{background:var(--cd);color:var(--tx);border:1px solid var(--bd);border-left:4px solid var(--pr);border-radius:12px;box-shadow:var(--sh);font-size:16px}
+.app-shell .floating-cart{background:var(--cd);color:var(--tx);border:1px solid var(--bd);border-radius:18px;box-shadow:var(--sh)}
+.app-shell .floating-cart:hover{border-color:var(--pr);box-shadow:var(--sh)}
+.app-shell .floating-cart-icon{background:var(--pr);color:var(--on);border-radius:12px}
+.app-shell .floating-cart-count{background:var(--cd);color:var(--pr);border:2px solid var(--pr)}
+.app-shell .floating-cart-copy small{color:var(--mu)}
+
+@media(max-width:800px){.app-shell .page-wrap{padding:22px 16px 56px}.app-shell :is(.page-wrap,.auth-page) .stat-card strong{font-size:26px}}
+
+/* ---------- Floating cart: round button that pops in bottom-right after adding ---------- */
+.app-shell .floating-cart{right:24px;bottom:24px;min-width:0;gap:0;padding:7px;border-radius:99px;animation:fc-in .5s cubic-bezier(.2,1.4,.4,1) both;overflow:visible}
+.app-shell .floating-cart-icon{width:52px;height:52px;border-radius:50%;animation:fc-pop .45s cubic-bezier(.2,1.5,.4,1)}
+.app-shell .floating-cart-copy,.app-shell .floating-cart>svg{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;transition:max-width .3s ease,opacity .2s ease,margin .3s ease}
+.app-shell .floating-cart:is(:hover,:focus-visible,.is-open) .floating-cart-copy{max-width:230px;opacity:1;margin:0 10px 0 12px}
+.app-shell .floating-cart:is(:hover,:focus-visible,.is-open)>svg{max-width:18px;opacity:1;margin-right:8px}
+.app-shell .floating-cart.is-bump{border-color:var(--pr);box-shadow:0 0 0 0 var(--pr),var(--sh);animation:fc-in .5s cubic-bezier(.2,1.4,.4,1) both,fc-ring 1.2s ease-out 2}
+.app-shell .floating-cart-count{top:-5px;right:-5px;font-weight:700}
+@keyframes fc-in{from{opacity:0;transform:translateY(30px) scale(.4)}to{opacity:1;transform:none}}
+@keyframes fc-pop{0%{transform:scale(.7) rotate(-12deg)}60%{transform:scale(1.18) rotate(6deg)}100%{transform:none}}
+@keyframes fc-ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--pr) 55%,transparent),var(--sh)}100%{box-shadow:0 0 0 18px transparent,var(--sh)}}
+@media(max-width:800px){.app-shell .floating-cart{right:14px;bottom:14px;padding:6px}.app-shell .floating-cart-icon{width:48px;height:48px}.app-shell .floating-cart:is(:hover,.is-open) .floating-cart-copy{max-width:170px}}
+@media(prefers-reduced-motion:reduce){.app-shell .floating-cart,.app-shell .floating-cart-icon,.app-shell .floating-cart.is-bump{animation:none}}
+
+/* ---------- Welcome / auth notices ---------- */
+.app-shell .nav-greet{font-size:16px;font-weight:500;color:var(--mu);margin-right:2px;white-space:nowrap}
+@media(max-width:900px){.app-shell .nav-greet{display:none}}
+.app-shell .auth-form .form-ok{display:flex;align-items:center;gap:8px;background:var(--gs);color:var(--gr);border:1px solid var(--gr);border-radius:12px;padding:10px 14px;font-size:16px;margin-bottom:12px}
+
+/* ---------- Loan dashboard ---------- */
+.app-shell .lb{display:grid;gap:16px}
+.app-shell .lb-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.app-shell .lb-head h3{margin:0 0 4px}.app-shell .lb-head p{margin:0}
+.app-shell .lb-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.app-shell .lb-stat{display:flex;align-items:center;gap:12px;background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:14px;box-shadow:var(--sh)}
+.app-shell .lb-stat>span{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--ps);color:var(--pr);flex-shrink:0}
+.app-shell .lb-stat strong{display:block;font-size:23px;line-height:1.2;font-weight:600;color:var(--tx)}
+.app-shell .lb-stat small{display:block;font-size:15px;color:var(--mu)}
+.app-shell .lb-stat.lb-warn>span{background:var(--as);color:var(--am)}
+.app-shell .lb-stat.lb-bad>span{background:var(--rs);color:var(--rd)}
+.app-shell .lb-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.app-shell .lb-chips{display:flex;gap:6px;flex-wrap:wrap}
+.app-shell .lb-chips button{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:99px;padding:6px 13px;font-size:16px;cursor:pointer}
+.app-shell .lb-chips button b{font-weight:600;font-size:15px;color:var(--mu)}
+.app-shell .lb-chips button.active{background:var(--pr);border-color:var(--pr);color:var(--on)}
+.app-shell .lb-chips button.active b{color:var(--on);opacity:.85}
+.app-shell .lb-search{display:flex;align-items:center;gap:8px;border:1px solid var(--bd);background:var(--cd);color:var(--mu);border-radius:12px;padding:7px 12px;min-width:230px}
+.app-shell .lb-search input{border:0;outline:0;background:transparent;color:var(--tx);font-size:16px;width:100%}
+.app-shell .lb-empty{text-align:center;color:var(--mu);padding:28px;border:1px dashed var(--bd);border-radius:14px;margin:0}
+.app-shell .lb-table td{vertical-align:top}
+.app-shell .lb-table td small,.app-shell .lb-table th+th small{display:block;color:var(--mu);font-size:15px;margin-top:2px}
+.app-shell .lb-fine{color:var(--rd);font-weight:600}
+.app-shell .lb-pill{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:3px 10px;font-size:15px;font-weight:600;white-space:nowrap}
+.app-shell .lb-pill i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.app-shell .lb-ok,.app-shell .lb-pill.lb-ok{background:var(--ps);color:var(--pr)}
+.app-shell .lb-ontime{background:var(--gs);color:var(--gr)}
+.app-shell .lb-soon{background:var(--as);color:var(--am)}
+.app-shell .lb-overdue{background:var(--rs);color:var(--rd)}
+.app-shell .lb-late{background:var(--as);color:var(--am)}
+.app-shell .lb-bar{height:5px;border-radius:99px;background:var(--bd);margin-top:7px;min-width:130px;overflow:hidden}
+.app-shell .lb-bar span{display:block;height:100%;border-radius:99px;background:currentColor}
+.app-shell .lb-bar.lb-ok{color:var(--pr);background:var(--bd)}.app-shell .lb-bar.lb-soon{color:var(--am);background:var(--bd)}.app-shell .lb-bar.lb-overdue{color:var(--rd);background:var(--bd)}.app-shell .lb-bar.lb-ontime{color:var(--gr);background:var(--bd)}.app-shell .lb-bar.lb-late{color:var(--am);background:var(--bd)}
+.app-shell .lb-watch{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
+.app-shell .lb-watch li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--bd)}
+.app-shell .lb-watch li:last-child{border:0;padding:0}
+.app-shell .lb-watch strong{display:block;font-size:16px}.app-shell .lb-watch small{color:var(--mu);font-size:15px}
+
+/* ---------- SaaS polish: one typeface, larger type, cleaner surfaces ---------- */
+html{font-size:17px}
+.app-shell,.app-shell :is(button,input,select,textarea){font-family:Inter,system-ui,-apple-system,'Segoe UI',sans-serif}
+.app-shell{font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.app-shell :is(.hero h1,.page-intro h1,.detail-copy h1,.auth-form h1,.dashboard-top h1,.not-found h1,h2,h3){letter-spacing:-.025em;font-weight:700}
+.app-shell .hero h1{letter-spacing:-.04em;font-weight:800}
+.app-shell :is(.page-wrap,.auth-page) h1{font-size:34px;line-height:1.2;font-weight:700}
+.app-shell :is(.page-wrap,.auth-page) :is(h2,h3){font-size:21px}
+.app-shell :is(.page-wrap,.auth-page){font-size:16px}
+.app-shell .page-wrap{max-width:1240px;padding:40px 40px 88px}
+.app-shell .navbar{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--bd)}
+.app-shell .nav-links a{font-size:16px;font-weight:500}
+.app-shell .brand span{font-weight:800;letter-spacing:-.03em}
+.app-shell .button,.app-shell .small-action,.app-shell .login-link{font-weight:600}
+.app-shell .login-link{background:var(--pr);color:var(--on);padding:9px 16px;border-radius:11px}
+.app-shell :is(.page-wrap,.auth-page) :is(.button,.small-action){padding:11px 18px;font-size:16px;border-radius:11px}
+.app-shell :is(.page-wrap,.auth-page) :is(input,select,textarea){font-size:15.5px}
+.app-shell :is(.page-wrap,.auth-page) :is(.auth-form,.profile-form,.issue-form) label{font-size:15px;color:var(--tx)}
+.app-shell .auth-demo{font-size:15px;color:var(--mu);text-align:center}
+/* tables */
+.app-shell :is(.page-wrap) table{font-size:16px}
+.app-shell :is(.page-wrap) th{font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--mu);font-weight:600;padding:14px 16px;position:sticky;top:0}
+.app-shell :is(.page-wrap) td{padding:16px;border-top:1px solid var(--bd)}
+.app-shell :is(.page-wrap) tbody tr{transition:background .12s}
+.app-shell :is(.page-wrap) tbody tr:hover{background:color-mix(in srgb,var(--ps) 55%,transparent)}
+.app-shell .table-wrap{border-radius:16px;box-shadow:var(--sh)}
+/* dashboard: segmented tabs + bolder stat cards */
+.app-shell .dashboard-tabs{display:inline-flex;gap:4px;padding:5px;background:var(--ps);border:1px solid var(--bd);border-radius:14px;margin:6px 0 24px;max-width:100%;overflow-x:auto;border-bottom:1px solid var(--bd)}
+.app-shell .dashboard-tabs button{border:0;background:transparent;color:var(--mu);padding:9px 18px;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;white-space:nowrap;box-shadow:none}
+.app-shell .dashboard-tabs button.active{background:var(--cd);color:var(--tx);box-shadow:var(--sh)}
+.app-shell .dashboard-tabs button::after{display:none}
+.app-shell .stat-grid{grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.app-shell .stat-card{padding:20px;border-radius:16px;gap:6px}
+.app-shell .stat-card strong{font-size:32px;font-weight:700;letter-spacing:-.03em}
+.app-shell .stat-card small{font-size:15px;color:var(--mu);font-weight:500}
+.app-shell .dashboard-panel{padding:24px;border-radius:18px}
+.app-shell .lb-stat strong{font-size:24px}.app-shell .lb-stat small{font-size:15px}
+.app-shell .lb-pill{font-size:15px}.app-shell .lb-chips button{font-size:14.5px;padding:8px 15px}
+.app-shell .lb-table td small{font-size:15px}
+.app-shell .lb-search input{font-size:16px}
+.app-shell .book-card,.app-shell .cart-row,.app-shell .order-summary{border-radius:16px}
+.app-shell .book-card{transition:transform .18s,box-shadow .18s}
+.app-shell .book-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px #3e2b2318}
+.app-shell .announcement{font-size:15px}
+@media(max-width:700px){html{font-size:16px}.app-shell .page-wrap{padding:26px 18px 72px}.app-shell :is(.page-wrap,.auth-page) h1{font-size:28px}}
+
+/* Large, easy-to-read type for every visitor */
+html{font-size:18px}body{font-size:18px;line-height:1.65}
+.eyebrow,.hero-proof small,.floating-note small,.stat-card small,td small,.status-pill,.safe-note,.detail-promise,.results-line,.select-wrap span,.select-wrap select,.footer-bottom,.announcement,.announcement-note,.ticker,.category-tile small,.cover-fallback small,.sold-out,.small-action,.history-row small,.cart-count,.role-chip,.cover-caption,.hero-stamp,.image-caption,.proof-avatars span{font-size:16px!important}
+.book-author,.rating,.add-button,.button,th,td,td strong,.nav-links,.login-link,.nav-search input,.catalog-search input,.hero-proof strong,.text-link,.why-item p,.lending-cards p,.footer-col>a,.dashboard-panel>p,.dashboard-panel .muted,.account-nav button,.auth-form input,.auth-form label,.profile-form input,.profile-form label,.issue-form input,.issue-form select,.inventory-form input,.inventory-form select,.inventory-form textarea,.stock-input,.toast,.form-error,.section-heading p,.page-intro p,.empty-state p{font-size:17px!important}
+.book-title{font-size:22px!important}.hero-copy>p{font-size:20px!important;max-width:480px!important}.detail-description{font-size:21px!important}
